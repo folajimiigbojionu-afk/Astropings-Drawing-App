@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astroping's Drawing Thing</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="top-bar">
+        <h1>Astroping's Drawing Thing</h1>
+
+        <div class="toolbar">
+            <div class="tool-group">
+                <div class="tool">
+                    <label for="colorPicker">Color</label>
+                    <input type="color" id="colorPicker" value="#2d3436">
+                </div>
+                <div class="tool">
+                    <label for="brushSize">Brush Size</label>
+                    <div class="brush-slider">
+                    <input type="range" id="brushSize" min="1" max="100" value="7">
+                    <span id="brushSizeValue">7</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tool-group">
+                <button class="btn btn-icon btn-danger" id="clearCanvas" title="Clear Canvas">
+                    <i class="fas fa-trash-alt"></i>
+                </button>
+                <button class="btn btn-icon" id="fullScreenBtn" title="Toggle Fullscreen">
+                    <i id="fullScreenIcon" class="fas fa-expand"></i>
+                </button>
+                <button class="btn btn-icon" id="undoBtn" title="Undo">
+                    <i class="fas fa-undo"></i>
+                </button>
+                <button class="btn btn-icon" id="redoBtn" title="Redo">
+                    <i class="fas fa-redo"></i>
+                </button>
+                <button class="btn btn-icon" id="themeToggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="btn btn-icon" id="exportBtn" title="Export Canvas">
+                    <i class="fas fa-download"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="drawingCanvas"></canvas>
+    <div id="recentColors" class="recent-colors-container"></div>
+    <script src="main.js"></script>
+</body>
+</html>
